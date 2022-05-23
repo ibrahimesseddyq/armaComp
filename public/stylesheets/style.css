@@ -1,8 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,400;1,500&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+:root {
+    --blue: #1A3C6B;
+    --orange: #FA7C46;
+    --blue-light: #EBF1FB;
+    --red-light: #F95360;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 27px "Montserrat", Helvetica, Arial, sans-serif;
+    overflow-y: hidden;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
+
+#container {
+    display: grid;
+    grid-template-rows: 1fr 7fr 1fr;
+}
+
+#header {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue);
+}
+
+#header #logo {}
+
+#main {
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 1fr 16fr;
+}
+
+#main #top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1/2;
+}
+
+#main #top #input_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--blue);
+}
+
+#main #top #input_top #run_btn {
+    height: 60px;
+    width: 110px;
+    background-color: var(--blue);
+    color: white;
+}
+
+#main #top #input_top i {
+    margin-left: 3px;
+    color: var(--blue);
+}
+
+#main #top #input_top #input_title {
+    font-size: 19px;
+    margin-left: 1px;
+}
+
+#main #top #input_top div {
+    display: flex;
+    align-items: center;
+}
+
+#main #top #output_top {
+    border: 1px solid var(--blue);
+}
+
+#main #bottom {
+    grid-row: 2/3;
+    grid-template-columns: 1fr 1fr;
+}
+
+#main #bottom #input {
+    grid-column: 1/2;
+    width: 50%;
+    border: 1px solid var(--blue);
+    height: 450px;
+}
+
+#main #bottom #output {
+    grid-column: 2/3;
+    width: 100%;
+    border: 1px solid var(--blue);
+    height: 100%;
+}
+
+#main #bottom textarea {
+    font-size: 20px;
+}
+
+#footer {}

@@ -1,5 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    div#container
+      div#header
+        span ArmaLang
+        img(src="./images/7.svg" width="130" height="150" alt="logo")#logo
+        span Compiler
+
+      form(action="/run" method="post")#main
+        div#top
+          div#input_top
+            div 
+              i.fa-solid.fa-file
+              span#input_title Input
+            button#run_btn Run 
+          div#output_top
+        div#bottom 
+          textarea(name="", cols="30", rows="10")#input
+          div#output
+      div#footer
+  
